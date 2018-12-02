@@ -8,6 +8,7 @@ class Info extends CI_Controller {
 		$this->load->model('Info_model');
 		$data['data'] = $this->Info_model->find($id);
 		$data['info'] = $this->Info_model->info();
+		$data['new'] = $this->Info_model->user_added_data($id);
 		$this->load->view('Info_view', $data);
 	}
 }

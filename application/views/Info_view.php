@@ -25,12 +25,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		  	</div>
 	  	</div>
 	  	<?php
-	  		$dt = array();
-	  		foreach ($data as $val) {
-	  			foreach ($val as $key => $value) {
-	  				$dt[$key] = $value;
-	  			}
-	  		}
+		  	if (!empty($data)) {
+		  		$dt = array();
+		  		foreach ($data as $val) {
+		  			foreach ($val as $key => $value) {
+		  				$dt[$key] = $value;
+		  			}
+		  		}
 	  	?>
 		<div class="container">
 				<h2 class="text-center" style="margin: 5% 0 2% 0; color: #555">Informatsiya</h2>
@@ -81,13 +82,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    	</div>
 		    	<div class="row">
 		    		<div class="col-md-12">
-		    			<p>Manzil uchun takliflar: </p>
+		    			<p><b>Ko'chaning avvalgi nomi:</b> <br/> 
+		    				<?php echo $new['manzil']; ?>
+		    			</p>
 		    		</div>
 		    		<div class="col-md-12">
-		    			<p>Mo'ljal uchun takliflar: </p>
+		    			<p><b>Mo'ljal:</b><br/>  <?php echo $new['moljal']; ?></p>
 		    		</div>
 		    		<div class="col-md-12">
-		    			<p>Yo'nalishli taksilar uchun takliflar: </p>
+		    			<p><b>Yo'nalishli taksilari:</b><br/><?php echo $new['taxi']; ?></p>
 		    		</div>
 		    	</div>
 		    	<div class="row">
@@ -95,20 +98,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    			<h3 class="text-center offer-header">Sizda qanday taklif bor?</h3>
 		    		</div>
 		    	</div>
-		    	<div class="row" style="margin-bottom: 100px">
-		    		<div class="form-group col-md-3">
-				      	<input type="text" class="form-control" placeholder="Ko'chaning eski nomini kiritish">
-				    </div>
-				    <div class="form-group col-md-3">
-				      	<input type="text" class="form-control" placeholder="Mo'ljal kiritish">
-				    </div>
-				    <div class="form-group col-md-3">
-				      	<input type="text" class="form-control" placeholder="Yo'nalish taksi kiritish">
-				    </div>
-				    <div class="form-group col-md-3">
-				      	<button type="submit" class="btn btn-success btn-block">Tasdiqlash</button>
-				    </div>
-		    	</div>
+		    	<form action = "<?php echo base_url() . 'add/'; ?>" method = "post">
+			    	<div class="row" style="margin-bottom: 100px">
+			    		<input type = "hidden" value = "<?php echo $dt['id']; ?>" name = "com_id">
+			    		<div class="form-group col-md-3">
+					      	<input type="text" class="form-control" name = "old_name" placeholder="Ko'chaning eski nomini kiritish">
+					    </div>
+					    <div class="form-group col-md-3">
+					      	<input type="text" class="form-control" name = "moljal" placeholder="Mo'ljal kiritish">
+					    </div>
+					    <div class="form-group col-md-3">
+					      	<input type="text" class="form-control" name = "taxi" placeholder="Yo'nalish taksi kiritish">
+					    </div>
+					    <div class="form-group col-md-3">
+					      	<button type="submit" class="btn btn-success btn-block" name = "send">Tasdiqlash</button>
+					    </div>
+			    	</div>
+			    </form>
+			<?php } else {
+				echo '<h4 class = "text-center">Nothing found!</h4>';
+			} ?>
 		</div>
 	<!-- js fayllar sahifani oxirida joylashtiramiz -->
 	<script src="js/bootstrap.min.js"></script>
