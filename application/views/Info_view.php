@@ -47,27 +47,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    		    </tr>
 	    		    <tr>
 	    		      <td><?php echo $info[2] ?>:</td>
-	    		      <td><?php echo $dt["moljal"]; ?></td>
+	    		      <td><?php echo $dt["telephone_number"]; ?></td>
 	    		    </tr>
 	    		    <tr>
 	    		      <td><?php echo $info[3] ?>:</td>
-	    		      <td><?php echo $dt['telephone_number']; ?></td>
-	    		    </tr>
-	    		    <tr>
-	    		      <td><?php echo $info[4] ?>:</td>
 	    		      <td><?php echo $dt['email']; ?></td>
 	    		    </tr>
 	    		    <tr>
-	    		      <td><?php echo $info[5] ?>:</td>
+	    		      <td><?php echo $info[4] ?>:</td>
 	    		      <td><?php echo $dt['region']; ?></td>
 	    		    </tr>
 	    		    <tr>
-	    		      <td><?php echo $info[6] ?>:</td>
+	    		      <td><?php echo $info[5] ?>:</td>
 	    		      <td><?php echo $dt['pochta_kod']; ?></td>
 	    		    </tr>
 	    		    <tr>
-	    		      <td><?php echo $info[7] ?>:</td>
+	    		      <td><?php echo $info[6] ?>:</td>
 	    		      <td><?php echo $dt['old_name']; ?></td>
+	    		    </tr>
+	    		    <tr>
+	    		      <td><?php echo $info[7] ?>:</td>
+	    		      <td><?php echo $dt['moljal']; ?></td>
 	    		    </tr>
 	    		    <tr>
 	    		      <td><?php echo $info[8] ?>:</td>

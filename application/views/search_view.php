@@ -13,7 +13,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		  		  		<div class="form-group col-md-2">
 		  		  			<a href = "<?php echo base_url(); ?>">
 		  		  				<img src="<?php echo base_url(); ?>assets/images/logo.png" alt="Logo">
-		  		  				<?php echo $sess; ?>
 		  		  			</a>
 		  		  		</div>
 				  		<div class = "form-group col-md-8">
@@ -56,41 +55,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    		} else echo "Nothing found!"; ?>
 	    		  </tbody>
 		    	</table>
-		    	<div class="row">
-		    		<div class="col-md-12">
-		    			<h3 class="text-center offer-header">Taklif qilingan va ko'rilib chiqilayotgan ma'lumotlar</h3>
-		    		</div>
-		    	</div>
-		    	<div class="row">
-		    		<div class="col-md-12">
-		    			<p>Manzil uchun takliflar: </p>
-		    		</div>
-		    		<div class="col-md-12">
-		    			<p>Mo'ljal uchun takliflar: </p>
-		    		</div>
-		    		<div class="col-md-12">
-		    			<p>Yo'nalishli taksilar uchun takliflar: </p>
-		    		</div>
-		    	</div>
-		    	<div class="row">
-		    		<div class="col-md-12">
-		    			<h3 class="text-center offer-header">Sizda qanday taklif bor?</h3>
-		    		</div>
-		    	</div>
-		    	<div class="row" style="margin-bottom: 100px">
-		    		<div class="form-group col-md-3">
-				      	<input type="text" class="form-control" placeholder="Qaysi tashkilotni izlayabsiz">
-				    </div>
-				    <div class="form-group col-md-3">
-				      	<input type="text" class="form-control" placeholder="Qaysi tashkilotni izlayabsiz">
-				    </div>
-				    <div class="form-group col-md-3">
-				      	<input type="text" class="form-control" placeholder="Qaysi tashkilotni izlayabsiz">
-				    </div>
-				    <div class="form-group col-md-3">
-				      	<button type="submit" class="btn btn-success btn-block">Tasdiqlash</button>
-				    </div>
-		    	</div>
 		</div>
 	</div>
 	<!-- js fayllar sahifani oxirida joylashtiramiz -->
