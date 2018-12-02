@@ -26,7 +26,7 @@ class Add extends CI_Controller {
 
 					$query = $this->db->query("UPDATE tempqo SET manzil = '$old_name', moljal = '$moljal', taxi = '$taxi' WHERE com_id = '$com_id'");
 				} else {
-					$query = $this->db->query("INSERT INTO tempqo (com_id, manzil, moljal, taxi) VALUES ('$com_id','$old_name_2', '$moljal_2', '$taxi_2')");
+					$query = $this->db->query("INSERT INTO tempqo (com_id, manzil, moljal, taxi) VALUES ('$com_id','$old_name', '$moljal', '$taxi')");
 				}
 				if ($query) {
 					redirect(base_url() . 'info/n/' . $com_id);
