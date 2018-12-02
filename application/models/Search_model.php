@@ -5,14 +5,14 @@ class Search_model extends CI_Model {
 	public function count_res($word) {
 		$data = array();
 
-		$query = $this->db->query("SELECT * FROM finder WHERE company_name LIKE '%$word%' OR pochta_kod LIKE '%$word%' OR telephone_number LIKE '%$word%' OR boss LIKE '%$word%' OR address LIKE '%$word%' OR region LIKE '%$word%' ORDER BY id DESC");
+		$query = $this->db->query("SELECT * FROM finder WHERE company_name LIKE '%$word%' OR pochta_kod LIKE '%$word%' OR telephone_number LIKE '%$word%' OR boss LIKE '%$word%' OR address LIKE '%$word%' OR region LIKE '%$word%' OR old_name LIKE '%$word%' OR mojal LIKE '%$word%' OR taxi LIKE '%$word%' ORDER BY id DESC");
 		return $query->num_rows();
 	}
 
 	public function search ($word) {
 		$data = array();
 
-		$query = $this->db->query("SELECT * FROM finder WHERE company_name LIKE '%$word%' OR pochta_kod LIKE '%$word%' OR telephone_number LIKE '%$word%' OR boss LIKE '%$word%' OR address LIKE '%$word%' OR region LIKE '%$word%' ORDER BY id DESC");
+		$query = $this->db->query("SELECT * FROM finder WHERE company_name LIKE '%$word%' OR pochta_kod LIKE '%$word%' OR telephone_number LIKE '%$word%' OR boss LIKE '%$word%' OR address LIKE '%$word%' OR region LIKE '%$word%' OR old_name LIKE '%$word%' OR mojal LIKE '%$word%' OR taxi LIKE '%$word%' ORDER BY id DESC");
 		if ($query) {
 			foreach ($query->result_array() as $row) {
 				$data[] = array(
